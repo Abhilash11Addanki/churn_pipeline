@@ -1,0 +1,44 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {
+        "labelKey": "churn"
+      }
+    ],
+    "slicingSpecs": [
+      {},
+      {
+        "featureKeys": [
+          "country"
+        ]
+      }
+    ],
+    "metricsSpecs": [
+      {
+        "metrics": [
+          {
+            "className": "BinaryAccuracy",
+            "threshold": {
+              "valueThreshold": {
+                "lowerBound": 0.5,
+                "upperBound": 0.99
+              }
+            }
+          },
+          {
+            "className": "ExampleCount"
+          }
+        ],
+        "modelNames": [
+          ""
+        ]
+      }
+    ]
+  },
+  "version": "0.25.0",
+  "dataLocation": "<user provided PCollection>",
+  "fileFormat": "<unknown>",
+  "modelLocations": {
+    "": "gs://imperial-legacy-380605-kubeflowpipelines-default/tfx_churn_pipeline/c4524764-165e-431d-9e1f-a716fb13625c/Trainer/model/32/serving_model_dir"
+  }
+}
